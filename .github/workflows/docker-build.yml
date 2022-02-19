@@ -9,9 +9,6 @@ jobs:
     - uses: AutoModality/action-clean@v1
     - name: Build AGW Docker images for ARM
       run: |
-        ls
         git clone https://github.com/m-govind/magma.git
-        pwd
-        ls
-        whoami
-        docker ps
+        cd magma/lte/gateway/docker/
+        docker-compose build --build-arg CPU_ARCH=aarch64 --build-arg DEB_PORT=arm64
