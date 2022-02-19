@@ -6,14 +6,10 @@ jobs:
   docker-build:
     runs-on: self-hosted
     steps:
+    - uses: AutoModality/action-clean@v1
     - name: Build AGW Docker images for ARM
       run: |
-
         ls
         git clone https://github.com/m-govind/magma.git
         pwd
         ls
-
-
-        echo "Cleaning up previous run"
-        rm -rf *
