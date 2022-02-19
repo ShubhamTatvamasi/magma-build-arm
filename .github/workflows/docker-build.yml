@@ -8,5 +8,6 @@ jobs:
     steps:
     - name: Build AGW Docker images for ARM
       run: |
-        echo "Hello World"
-        lscpu
+        git clone https://github.com/m-govind/magma.git
+        pwd
+        ls
