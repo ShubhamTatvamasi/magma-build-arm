@@ -14,3 +14,5 @@ jobs:
         git clone https://github.com/m-govind/magma.git
         pwd
         ls
+        whoami
+        docker ps
