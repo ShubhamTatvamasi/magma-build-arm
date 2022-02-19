@@ -1,11 +1,6 @@
-name: docker build
+name: Build Magma Access Gateway Docker Images for ARM
 
-on:
-  push:
-    branches:
-      - 'master'
-    tags:
-      - '*'
+on: [push]
 
 jobs:
   docker-build:
@@ -14,3 +9,4 @@ jobs:
     - name: Build AGW Docker images for ARM
       run: |
         echo "Hello World"
+        lscpu
