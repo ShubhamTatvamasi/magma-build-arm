@@ -6,8 +6,9 @@ jobs:
   docker-build:
     runs-on: self-hosted
     steps:
-    - name: Cleanup
-      run: rm -rf *
+    # - name: Cleanup
+    #   run: rm -rf *
+    - uses: AutoModality/action-clean@v1
     - name: Build AGW Docker images for ARM
       run: |
         ls
