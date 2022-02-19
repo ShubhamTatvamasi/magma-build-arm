@@ -8,6 +8,10 @@ jobs:
     steps:
     - name: Build AGW Docker images for ARM
       run: |
+        echo "Cleaning up previous run"
+        rm -rf "${{ github.workspace }}"
+
+        ls
         git clone https://github.com/m-govind/magma.git
         pwd
         ls
